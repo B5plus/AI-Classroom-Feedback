@@ -1,0 +1,14 @@
+import { useState } from 'react'
+import ContactForm from './components/ContactForm'
+import './App.css'
+
+function App() {
+  return (
+    <div className="app">
+      <ContactForm />
+    </div>
+  )
+}
+
+export default App
+
