@@ -1,3 +1,0 @@
-# AI Classroom Feedback System
-
-A modern contact form for AI Foundation Course feedback collection.

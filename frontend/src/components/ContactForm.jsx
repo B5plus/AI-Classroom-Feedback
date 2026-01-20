@@ -3,6 +3,9 @@ import axios from 'axios';
 import './ContactForm.css';
 import logo from '../Images/b5_logo.jpg';
 
+// API URL from environment variable or fallback to proxy
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -32,7 +35,7 @@ const ContactForm = () => {
     console.log('Submitting form data:', formData);
 
     try {
-      const response = await axios.post('/api/contact', formData);
+      const response = await axios.post(`${API_URL}/api/contact`, formData);
 
       setAlert({
         show: true,

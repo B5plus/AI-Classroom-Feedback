@@ -77,7 +77,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🧪 Test Contact Form API</h1>
+        <h1> Test Contact Form API</h1>
         <p>Fill out this form to test your backend API directly</p>
 
         <form id="testForm">
@@ -156,13 +156,13 @@
                 if (response.ok) {
                     resultDiv.className = 'result success';
                     resultDiv.innerHTML = `
-                        <h3>✅ Success!</h3>
+                        <h3> Success!</h3>
                         <pre>${JSON.stringify(data, null, 2)}</pre>
                     `;
                 } else {
                     resultDiv.className = 'result error';
                     resultDiv.innerHTML = `
-                        <h3>❌ Error (${response.status})</h3>
+                        <h3> Error (${response.status})</h3>
                         <pre>${JSON.stringify(data, null, 2)}</pre>
                     `;
                 }
@@ -170,7 +170,7 @@
                 console.error('Error:', error);
                 resultDiv.className = 'result error';
                 resultDiv.innerHTML = `
-                    <h3>❌ Network Error</h3>
+                    <h3> Network Error</h3>
                     <p>${error.message}</p>
                 `;
             }
