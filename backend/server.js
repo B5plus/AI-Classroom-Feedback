@@ -21,7 +21,19 @@ if (!supabaseUrl || !supabaseKey) {
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-app.use(cors());
+// CORS configuration - allow requests from frontend
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://ai-classroom-feedback-frontend.onrender.com",
+    process.env.FRONTEND_URL,
+  ].filter(Boolean),
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
